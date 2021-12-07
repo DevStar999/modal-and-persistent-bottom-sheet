@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- Add background color as white -->
+    <solid android:color="@android:color/white"/>
+
+    <!-- Add some padding for text inside -->
+    <padding
+        android:bottom="16dp"
+        android:left="16dp"
+        android:right="16dp"
+        android:top="16dp" />
+
+    <!-- We define corner radius, note that radius
+    can be different for each corner -->
+    <corners android:topLeftRadius="30dp"
+        android:topRightRadius="30dp"/>
+</shape>
