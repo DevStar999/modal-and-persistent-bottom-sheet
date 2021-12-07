@@ -9,3 +9,11 @@ b. The bottom sheet will change state from collapsed to expanded state with clic
 3) Do make sure to check if the flag 'app:behavior_hideable' in 'persistent_bottom_sheet.xml' file needs to be
 set to 'true' meaning the Persistent Bottom Sheet can be hidden at the bottom of the screen OR 'false' meaning
 the Persistent Bottom Sheet cannot be hidden at the bottom of the screen.
+
+For Modal Bottom Sheet:
+1) Use the classes 'ModalSheetActivity.java' and 'ModalSheetDialog.java' and the layout files
+'activity_modal_sheet.xml'and 'modal_bottom_sheet.xml'.
+2) Along with these files we are using the 'bottom_sheet_background.xml' files for rounded corners and wiring it in the
+'themes.xml' files for it work
+3) Also parent="Theme.MaterialComponents.DayNight.BottomSheetDialog" the theme till 'DayNight' which we are extending from
+is the same as the parent of the App's main theme. So we should prefer to keep it same with that
