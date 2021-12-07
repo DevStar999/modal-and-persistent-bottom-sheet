@@ -1,6 +1,11 @@
-For Persistent Sheet:
+For Persistent Bottom Sheet:
 1) Use the class 'PersistentSheetActivity.java' and the layout files 'activity_persistent_sheet.xml'
-and 'activity_bottom_sheet.xml'.
+and 'persistent_bottom_sheet.xml'.
 2) From these files we will get a basic working Persistent Bottom Sheet along with the following provisions:
 a. The bottom sheet will to changed to state collapsed from hidden state on a swipe up gesture.
+(Do make a decision on keep this feature in 2.a or not, since we trigger the Bottom Sheet by a designated click or
+some other way anyways)
 b. The bottom sheet will change state from collapsed to expanded state with click on it.
+3) Do make sure to check if the flag 'app:behavior_hideable' in 'persistent_bottom_sheet.xml' file needs to be
+set to 'true' meaning the Persistent Bottom Sheet can be hidden at the bottom of the screen OR 'false' meaning
+the Persistent Bottom Sheet cannot be hidden at the bottom of the screen.
