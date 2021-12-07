@@ -1,8 +1,10 @@
 package com.example.modalandpersistentbottomsheet;
 
+import android.graphics.Outline;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewOutlineProvider;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -21,6 +23,16 @@ public class PersistentSheetActivity extends AppCompatActivity {
 
     private void initialise() {
         bottomSheet = findViewById(R.id.persistent_bottom_sheet);
+        // Setting outline to bottom sheet as follows
+        bottomSheet.setOutlineProvider(new ViewOutlineProvider() {
+            @Override
+            public void getOutline(View view, Outline outline) {
+                float curveRadius = 50f;
+                outline.setRoundRect(0, 0, view.getWidth(),
+                        Float.valueOf(view.getHeight()+curveRadius).intValue(), curveRadius);
+            }
+        });
+        bottomSheet.setClipToOutline(true);
         statusTextView = findViewById(R.id.persistent_bottom_sheet_status_text_view);
         expandButton = findViewById(R.id.expand_button);
         collapseButton = findViewById(R.id.collapse_button);
