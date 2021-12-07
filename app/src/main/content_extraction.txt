@@ -1,0 +1,6 @@
+For Persistent Sheet:
+1) Use the class 'PersistentSheetActivity.java' and the layout files 'activity_persistent_sheet.xml'
+and 'activity_bottom_sheet.xml'.
+2) From these files we will get a basic working Persistent Bottom Sheet along with the following provisions:
+a. The bottom sheet will to changed to state collapsed from hidden state on a swipe up gesture.
+b. The bottom sheet will change state from collapsed to expanded state with click on it.
