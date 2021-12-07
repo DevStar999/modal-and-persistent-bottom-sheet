@@ -1,12 +1,13 @@
 package com.example.modalandpersistentbottomsheet;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
@@ -25,6 +26,19 @@ public class PersistentSheetActivity extends AppCompatActivity {
         collapseButton = findViewById(R.id.collapse_button);
 
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        int action = event.getAction();
+
+        if (action == MotionEvent.ACTION_UP) {
+            if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_HIDDEN) {
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
+            return true;
+        }
+        return super.onTouchEvent(event);
     }
 
     @Override
